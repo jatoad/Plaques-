@@ -100,9 +100,9 @@
     <img src="Picture2.png" alt="Plaque Design 1" onclick="openImage(this)">
 </section>
 
-<footer>
-    Pleistocene Exhibit Redesign Project
-</footer>
+<div id="overlay" onclick="closeImage()">
+    <img id="fullImage">
+</div>
 
 <script>
 function openImage(img) {
@@ -114,6 +114,10 @@ function closeImage() {
     document.getElementById("overlay").style.display = "none";
 }
 </script>
+
+<footer>
+    Pleistocene Exhibit Redesign Project
+</footer>
 
 </body>
 </html>
