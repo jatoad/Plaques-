@@ -77,12 +77,43 @@
         max-width: 95%;
         max-height: 95%;
     }
+    .back-to-top {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background: #F47B20;
+        color: #F7F7F5;
+        border: none;
+        font-size: 1.5rem;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.35);
+        transition: all 0.25s ease;
+        z-index: 1000;
+    }
+
+    .back-to-top:hover {
+        background: #ff9a4d;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
 
 </style>
 </head>
 <body>
 
-<header class="header">
+<header class="header" id="top">
     <h1>Pleistocene Plaque Design Concepts</h1>
     <h4 class="subtitle">
         Proposed educational plaque designs for the Bristol Museum & Art Gallery
@@ -178,6 +209,10 @@ function closeImage() {
     document.getElementById("overlay").style.display = "none";
 }
 </script>
+
+<a href="#top" class="back-to-top" title="Back to top">
+    ▲
+</a>
 
 <footer>
     Website design by Jasper Todd
