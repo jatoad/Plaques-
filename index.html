@@ -78,7 +78,7 @@
         max-height: 95%;
     }
     .back-to-top {
-        position: absolute;
+        position: fixed;
         bottom: 25px;
         right: 25px;
         width: 100px;
@@ -97,6 +97,10 @@
         box-shadow: 0 4px 15px rgba(0,0,0,0.35);
         transition: all 0.25s ease;
         z-index: 1000;
+    }
+
+    .back-to-top.hidden {
+    display: none;
     }
 
     .back-to-top:hover {
@@ -203,15 +207,19 @@
 function openImage(img) {
     document.getElementById("fullImage").src = img.src;
     document.getElementById("overlay").style.display = "flex";
+    document.getElementById("backToTop").classList.add("hidden");
 }
 
 function closeImage() {
     document.getElementById("overlay").style.display = "none";
+    document.getElementById("backToTop").classList.remove("hidden");
 }
+
 </script>
 
-<a href="#top" class="back-to-top" title="Back to top">
-   To top
+<a href="#top" class="back-to-top" id="backToTop" title="Back to top">
+    <span class="text">Return</span>
+    <span class="arrow">▲</span>
 </a>
 
 <footer>
