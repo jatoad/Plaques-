@@ -100,7 +100,7 @@
     }
 
     .back-to-top.hidden {
-    display: none;
+        display: none;
     }
 
     .back-to-top:hover {
@@ -112,6 +112,28 @@
     html {
         scroll-behavior: smooth;
     }
+    .nav-links {
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        background: #F47B20;
+        color: #F7F7F5;
+        text-decoration: none;
+        padding: 12px 24px;
+        border-radius: 999px;
+        font-weight: bold;
+        transition: 0.25s ease;
+    }
+
+    .nav-links a:hover {
+        background: #ff9a4d;
+        transform: translateY(-2px);
+    }
 
 </style>
 </head>
@@ -119,10 +141,16 @@
 
 <header class="header" id="top">
     <h1>Pleistocene Plaque Design Concepts</h1>
+
     <h4 class="subtitle">
         Proposed educational plaque designs for the Bristol Museum & Art Gallery
         Pleistocene exhibit redesign.
     </h4>
+
+    <div class="nav-links">
+        <a href="#plaque">Main Plaques</a>
+        <a href="#specimen">Specimen Graphics</a>
+    </div>
 </header>
 
 <section class="plaque-section">
@@ -130,7 +158,7 @@
     <img src="display.png" alt="Plaque Design 1" onclick="openImage(this)">
 </section>
 
-<div class="header">
+<div class="header" id="plaque">
     <h1>
         Main Plaques
     </h1>
@@ -154,7 +182,7 @@
     <img src="tactile.png" alt="Plaque Design 1" onclick="openImage(this)">
 </section>
 
-<div class="header">
+<div class="header" id="specimen">
     <h1>
         Specimen Graphics
     </h1>
